@@ -10,7 +10,7 @@ namespace BookStore.Entities
         public string Name { get; set; }
         public int Year { get; set; }
         public int Price { get; set; }
-        [JsonIgnore]
+        //[JsonIgnore]
         public virtual Author Author { get; set; }
     }
 }

@@ -91,7 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -114,6 +114,10 @@
     <ProjectReference Include="..\BookStore.Entities\BookStore.Entities.csproj">
       <Project>{2e2e60b7-8b43-4d7a-baa4-fc1994052474}</Project>
       <Name>BookStore.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookStore.Repositories\BookStore.Repositories.csproj">
+      <Project>{A04995AC-CB1A-4C34-8065-0FA1C868EA98}</Project>
+      <Name>BookStore.Repositories</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
