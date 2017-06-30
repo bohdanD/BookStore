@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.API", "BookStore.API\BookStore.API.csproj", "{2DE61D7D-3CE7-482F-9A69-2CDE5201A3CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Entities", "BookStore.Entities\BookStore.Entities.csproj", "{2E2E60B7-8B43-4D7A-BAA4-FC1994052474}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Repositories", "BookStore.Repositories\BookStore.Repositories.csproj", "{A04995AC-CB1A-4C34-8065-0FA1C868EA98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Entities", "BookStore.Entities\BookStore.Entities.csproj", "{2E2E60B7-8B43-4D7A-BAA4-FC1994052474}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{2DE61D7D-3CE7-482F-9A69-2CDE5201A3CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DE61D7D-3CE7-482F-9A69-2CDE5201A3CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DE61D7D-3CE7-482F-9A69-2CDE5201A3CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2E2E60B7-8B43-4D7A-BAA4-FC1994052474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2E2E60B7-8B43-4D7A-BAA4-FC1994052474}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2E2E60B7-8B43-4D7A-BAA4-FC1994052474}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2E2E60B7-8B43-4D7A-BAA4-FC1994052474}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A04995AC-CB1A-4C34-8065-0FA1C868EA98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A04995AC-CB1A-4C34-8065-0FA1C868EA98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A04995AC-CB1A-4C34-8065-0FA1C868EA98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A04995AC-CB1A-4C34-8065-0FA1C868EA98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E2E60B7-8B43-4D7A-BAA4-FC1994052474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2E60B7-8B43-4D7A-BAA4-FC1994052474}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2E60B7-8B43-4D7A-BAA4-FC1994052474}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2E60B7-8B43-4D7A-BAA4-FC1994052474}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
