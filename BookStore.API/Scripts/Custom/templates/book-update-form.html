@@ -1,0 +1,15 @@
+﻿<form id="editBookForm" class="form-inline" ng-submit="editBookSubmit()">
+    <div class="form-group">
+        <label for="Name" class="">Name:</label>
+        <input name="Name" type="text" class="form-control" ng-model="book.Name"/>
+    </div>
+    <div class="form-group">
+        <label for="Year" class="">Year:</label>
+        <input name="Year" type="number" class="form-control" ng-model="book.Year"/>
+    </div>
+    <div class="form-group">
+        <label for="Price" class="">Price:</label>
+        <input name="Price" type="number" class="form-control" ng-model="book.Price"/>
+    </div>
+    <input type="submit" value="Update" class="btn btn-success"/>
+</form>

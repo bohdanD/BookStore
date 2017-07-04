@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html ng-app="bookStore">
+<head>
+    <meta charset="utf-8" />
+    <title>Book store</title>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/Index.html">Book store</a>
+            </div>
+            <ul class="nav navbar-nav"> 
+                <li><a href="#">Add</a></li>
+                <li><a href="#">Delete</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <div class="row" ng-controller="StoreController">
+            <book-list></book-list>
+        </div>
+
+        <hr />
+        <footer>
+            &copy; Book store
+        </footer>
+    </div>
+
+    <script src="Scripts/Custom/app.js"></script>
+</body>
+</html>

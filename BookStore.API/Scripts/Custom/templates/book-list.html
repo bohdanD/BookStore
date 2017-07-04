@@ -1,0 +1,22 @@
+﻿<div ng-show="showBooks">
+    <h3 class="text-center">List of books</h3>
+    <div class="table-responsive">
+        <table class="table" ng-show="books.length">
+            <tr>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Year</th>
+                <th>Price</th>
+                <th>Edit</th>
+            </tr>
+            <tr ng-repeat="book in books">
+                <td>{{book.Name}}</td>
+                <td>{{book.Author.Name}}</td>
+                <td>{{book.Year}}</td>
+                <td>{{book.Price | currency}}</td>
+                <td><input type="button" class="btn" value="Edit" ng-click="editBook(book.Id)"/></td>
+            </tr>
+        </table>
+    </div>
+    <book-update-form ng-show="showBookUpdateForm"></book-update-form>
+</div>
