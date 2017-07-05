@@ -32,16 +32,24 @@ namespace BookStore.API.Controllers
         }
 
         // PUT api/<controller>/5
-        public void Put(int id, [FromBody]Book value)
+        public IHttpActionResult Put(int id, [FromBody]Book value)
         {
-            var book = _unitOfWork.BookRepository.Find(id);
-            book.Name = value.Name;
-            book.Price = value.Price;
-            book.Year = value.Year;
-            var author = _unitOfWork.AuthorRepository.Find(value.Author.Id);
-            book.Author = author ?? value.Author;
-            _unitOfWork.BookRepository.Update(book);
-            _unitOfWork.SaveChanges();
+            try
+            {
+                var book = _unitOfWork.BookRepository.Find(id);
+                book.Name = value.Name;
+                book.Price = value.Price;
+                book.Year = value.Year;
+                var author = _unitOfWork.AuthorRepository.Find(value.Author.Id);
+                book.Author = author ?? value.Author;
+                _unitOfWork.BookRepository.Update(book);
+                _unitOfWork.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            return Ok();
         }
 
         // DELETE api/<controller>/5
