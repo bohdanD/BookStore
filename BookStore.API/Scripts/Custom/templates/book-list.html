@@ -18,5 +18,9 @@
             </tr>
         </table>
     </div>
-    <book-update-form ng-show="showBookUpdateForm"></book-update-form>
+    <book-update-form id="editBookForm"
+        book="book"
+        show="show">
+    </book-update-form>
+    <message-success ng-show="show.showSuccessMsg" message="show.successMsg"></message-success>
 </div>

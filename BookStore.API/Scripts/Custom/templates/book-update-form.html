@@ -1,4 +1,4 @@
-﻿<form id="editBookForm" class="form-inline" ng-submit="editBookSubmit()">
+﻿<form class="form-inline" ng-submit="editBookSubmit()" ng-show="show.showBookUpdateForm">
     <div class="form-group">
         <label for="Name" class="">Name:</label>
         <input name="Name" type="text" class="form-control" ng-model="book.Name"/>
