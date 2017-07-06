@@ -25,10 +25,11 @@ namespace BookStore.API.Controllers
         }
 
         // POST api/<controller>
-        public void Post([FromBody]Book value)
+        public IHttpActionResult Post([FromBody]Book value)
         {
             _unitOfWork.BookRepository.Create(value);
             _unitOfWork.SaveChanges();
+            return Ok();
         }
 
         // PUT api/<controller>/5
