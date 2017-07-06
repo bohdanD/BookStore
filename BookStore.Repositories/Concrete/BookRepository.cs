@@ -21,6 +21,8 @@ namespace BookStore.Repositories.Concrete
             {
                 throw new ArgumentNullException();
             }
+            var author = _context.Authors.Find(item.Author.Id);
+            item.Author = author;
             _context.Books.Add(item);
         }
 

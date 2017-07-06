@@ -32,6 +32,7 @@ namespace BookStore.Repositories.Concrete
             var author = _context.Authors.Find(id);
             if (author != null)
             {
+                _context.Books.RemoveRange(author.Books);
                 _context.Authors.Remove(author);
             }
         }
