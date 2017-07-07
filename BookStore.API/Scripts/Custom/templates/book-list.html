@@ -8,6 +8,7 @@
                 <th>Year</th>
                 <th>Price</th>
                 <th>Edit</th>
+                <th>Delete</th>
             </tr>
             <tr ng-repeat="book in books">
                 <td>{{book.Name}}</td>
@@ -15,6 +16,7 @@
                 <td>{{book.Year}}</td>
                 <td>{{book.Price | currency}}</td>
                 <td><input type="button" class="btn" value="Edit" ng-click="editBook(book.Id)"/></td>
+                <td><input type="button" class="btn" value="Delete" ng-click="deleteBook(book.Id)"/></td>
             </tr>
         </table>
     </div>

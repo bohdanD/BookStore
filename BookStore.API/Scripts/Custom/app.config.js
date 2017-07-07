@@ -8,6 +8,9 @@ angular
                 .when('/books', {
                     template: '<book-list></book-list>'
                 })
+                .when('/addBook', {
+                    template: '<add-form></add-form>'
+                })
                 .otherwise('/books');
         }
     ]);

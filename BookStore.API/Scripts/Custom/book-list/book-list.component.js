@@ -7,9 +7,17 @@ appModule
             function BookListController($http, $scope) {
                 $scope.showBooks = true;
                 $scope.books = [];
-                $http.get('/api/book').then(function successCallback(response) {
-                    $scope.books = response.data;
-                });
+
+                function updateBookList() {
+                    $http({
+                        method: 'GET',
+                        url: '/api/book'
+                    }).then(function successCallback(response) {
+                        $scope.books = response.data;
+                    });
+                }
+                
+                updateBookList();
 
                 $scope.show = {};
                 $scope.show.showBookUpdateForm = false;
@@ -24,6 +32,15 @@ appModule
                     var el = document.getElementById('editBookForm');
                     el.scrollIntoView();
                 };
+
+                $scope.deleteBook = function (id){
+                    $http({
+                        method: 'DELETE',
+                        url: '/api/book/' + id
+                    }).then(function successCallback(){
+                        updateBookList();
+                    });
+                }
 
             }]
     });

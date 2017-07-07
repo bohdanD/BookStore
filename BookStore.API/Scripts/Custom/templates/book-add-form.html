@@ -1,0 +1,21 @@
+<form ng-submit="addBookSubmit()">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" name="name" class="form-control" ng-model="book.Name"/>
+    </div>
+    <div class="form-group">
+        <label for="author">Author:</label>
+        <select name="author" class="form-control" ng-model="book.Author">
+            <option ng-repeat="author in authors" ng-value="author">{{author.Name}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="year">Year:</label>
+        <input type="number" name="year" class="form-control" ng-model="book.Year" min="1"/>
+    </div>
+    <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" name="price" class="form-control" ng-model="book.Price" min="0"/>
+    </div>
+    <input type="submit" class="btn btn-success" value="Add book"/>
+</form>
