@@ -1,15 +1,17 @@
-﻿<form class="form-inline" ng-submit="editBookSubmit()" ng-show="show.showBookUpdateForm">
+﻿<form name="updateForm" class="form-inline" ng-submit="editBookSubmit()" ng-show="show.showBookUpdateForm" novalidate>
     <div class="form-group">
         <label for="Name" class="">Name:</label>
-        <input name="Name" type="text" class="form-control" ng-model="book.Name"/>
+        <input name="Name" type="text" class="form-control" ng-model="book.Name" required/>
     </div>
     <div class="form-group">
         <label for="Year" class="">Year:</label>
-        <input name="Year" type="number" class="form-control" ng-model="book.Year"/>
+        <input name="Year" type="number" class="form-control" ng-model="book.Year" min="0" required/>
     </div>
     <div class="form-group">
         <label for="Price" class="">Price:</label>
-        <input name="Price" type="number" class="form-control" ng-model="book.Price"/>
+        <input name="Price" type="number" class="form-control" ng-model="book.Price" min="0" required/>
     </div>
-    <input type="submit" value="Update" class="btn btn-success"/>
+    <input type="submit" value="Update" class="btn btn-success" ng-disabled="updateForm.$error.required"/>
+    <br>
+    <span ng-show="updateForm.$error.required" class="text-danger">Fields cannot be empty.</span>
 </form>

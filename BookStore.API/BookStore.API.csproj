@@ -123,10 +123,13 @@
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Custom\add-form\add-form.component.js" />
+    <Content Include="Scripts\Custom\add-form\add-form.module.js" />
     <Content Include="Scripts\Custom\app.config.js" />
     <Content Include="Scripts\Custom\app.js" />
     <Content Include="Scripts\Custom\book-list\book-list.component.js" />
     <Content Include="Scripts\Custom\book-list\book-list.module.js" />
+    <Content Include="Scripts\Custom\templates\book-add-form.html" />
     <Content Include="Scripts\Custom\templates\book-list.html" />
     <Content Include="Scripts\Custom\templates\book-update-form.html" />
     <Content Include="Scripts\Custom\templates\message-success.html" />
@@ -876,6 +879,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AuthorController.cs" />
     <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

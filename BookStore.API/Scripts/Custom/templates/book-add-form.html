@@ -1,21 +1,26 @@
-<form ng-submit="addBookSubmit()">
+<h2 class="text-center">Add book</h2><br>
+<form name="addForm" ng-submit="addBookSubmit()" class="col-sm-offset-3 col-sm-6" novalidate>
     <div class="form-group">
         <label for="name">Name:</label>
-        <input type="text" name="name" class="form-control" ng-model="book.Name"/>
+        <input type="text" name="name" class="form-control" ng-model="book.Name" required/>
+        <span class="text-danger" ng-show="addForm.name.$error.required && addForm.name.$dirty">Name is required!</span>
     </div>
     <div class="form-group">
         <label for="author">Author:</label>
-        <select name="author" class="form-control" ng-model="book.Author">
+        <select name="author" class="form-control" ng-model="book.Author" required>
             <option ng-repeat="author in authors" ng-value="author">{{author.Name}}</option>
         </select>
+        <span class="text-danger" ng-show="addForm.author.$error.required">Select author!</span>
     </div>
     <div class="form-group">
         <label for="year">Year:</label>
-        <input type="number" name="year" class="form-control" ng-model="book.Year" min="1"/>
+        <input type="number" name="year" class="form-control" ng-model="book.Year" min="0" required/>
+        <span class="text-danger" ng-show="addForm.year.$error.required">Year is required</span>
     </div>
     <div class="form-group">
         <label for="price">Price:</label>
-        <input type="number" name="price" class="form-control" ng-model="book.Price" min="0"/>
+        <input type="number" name="price" class="form-control" ng-model="book.Price" min="0" required/>
+        <span class="text-danger" ng-show="addForm.price.$error.required">Price is required</span>
     </div>
-    <input type="submit" class="btn btn-success" value="Add book"/>
+    <input type="submit" class="btn btn-success" value="Add book" ng-disabled="addForm.$error.required"/>
 </form>
