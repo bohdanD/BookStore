@@ -10,6 +10,7 @@ namespace BookStore.Repositories
         private readonly StoreContext _context = new StoreContext();
         private IRepository<Book> _bookRepository;
         private IRepository<Author> _authorRepository;
+        private IRepository<Order> _orderRepository;
 
         public IRepository<Book> BookRepository
         {
@@ -32,6 +33,18 @@ namespace BookStore.Repositories
                     _authorRepository = new AuthorRepository(_context);
                 }
                 return _authorRepository;
+            }
+        }
+
+        public IRepository<Order> OrderRepository
+        {
+            get
+            {
+                if(_orderRepository == null)
+                {
+                    _orderRepository = new OrderRepository(_context);
+                }
+                return _orderRepository;
             }
         }
 
