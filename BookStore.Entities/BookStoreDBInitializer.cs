@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Globalization;
+using BookStore.Entities.Migrations;
 
 namespace BookStore.Entities
 {
@@ -10,6 +11,8 @@ namespace BookStore.Entities
         protected override void Seed(StoreContext context)
         {
             base.Seed(context);
+
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<StoreContext, Configuration>());
 
             List<Author> authors = new List<Author>
             {

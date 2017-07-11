@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace BookStore.Entities
 {
@@ -10,7 +9,6 @@ namespace BookStore.Entities
         public string Name { get; set; }
         public int Year { get; set; }
         public int Price { get; set; }
-        //[JsonIgnore]
         public virtual Author Author { get; set; }
     }
 }
