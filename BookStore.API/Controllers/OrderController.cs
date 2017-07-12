@@ -32,12 +32,28 @@ namespace BookStore.API.Controllers
                 return BadRequest();
             }
             _unitOfWork.OrderRepository.Create(value);
+            _unitOfWork.SaveChanges();
             return Ok();
         }
 
         // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
+        public IHttpActionResult Put(int id, [FromBody]Order value)
         {
+            try
+            {
+                if (value == null)
+                {
+                    return BadRequest();
+                }
+                value.Id = id;
+                _unitOfWork.OrderRepository.Update(value);
+                _unitOfWork.SaveChanges();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+            return Ok();
         }
 
         // DELETE api/<controller>/5

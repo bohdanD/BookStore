@@ -51,6 +51,17 @@ namespace BookStore.Repositories.Concrete
 
         public void Update(Order item)
         {
+            var order = _context.Orders.Find(item.Id);
+            if (order == null)
+            {
+                throw new ArgumentException();
+            }
+            var books = new List<Book>();
+            foreach (var book in item.Books)
+            {
+                books.Add(_context.Books.Find(book.Id));
+            }
+            order.Books = books;
             _context.Entry(item).State = System.Data.Entity.EntityState.Modified;
         }
     }
