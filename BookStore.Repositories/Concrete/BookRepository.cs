@@ -29,10 +29,11 @@ namespace BookStore.Repositories.Concrete
         public void Delete(int id)
         {
             var book = _context.Books.Find(id);
-            if (book != null)
+            if (book == null)
             {
-                _context.Books.Remove(book);
+                throw new ArgumentException();
             }
+            _context.Books.Remove(book);
         }
 
         public Book Find(int id)
